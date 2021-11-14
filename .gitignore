@@ -1,0 +1,10 @@
+.env
+node_modules
+tmp
+coverage
+docs
+.idea/
+.history/
+.vscode
+.DS_Store
+

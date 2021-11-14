@@ -1,0 +1,74 @@
+{
+  "name": "hackathon_2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server",
+    "lint": "eslint . -c .eslintrc.json",
+    "lint-fix": "eslint . -c .eslintrc.json --fix",
+    "test": "LOG_LEVEL=error NODE_ENV=test jest --detectOpenHandles"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "fastify": "^3.22.1",
+    "fastify-cors": "^6.0.2",
+    "fastify-env": "^2.1.1",
+    "fastify-plugin": "^3.0.0",
+    "fastify-swagger": "^4.12.6",
+    "make-promises-safe": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "jest": "^27.3.1",
+    "nock": "^13.1.4",
+    "nodemon": "^2.0.14"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "es6": true,
+      "jest/globals": true,
+      "node": true
+    },
+    "plugins": [
+      "jest",
+      "prettier"
+    ],
+    "extends": [
+      "plugin:prettier/recommended",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018
+    }
+  },
+  "eslintIgnore": [
+    "node_modules/*",
+    "coverage/*",
+    ".nyc_output/*"
+  ],
+  "jest": {
+    "clearMocks": true,
+    "coverageReporters": [
+      "html",
+      "text"
+    ],
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "testEnvironment": "node",
+    "coverageThreshold": {
+      "global": {
+        "statements": 89.07,
+        "branches": 75,
+        "functions": 90,
+        "lines": 89.16
+      }
+    }
+  }
+}
